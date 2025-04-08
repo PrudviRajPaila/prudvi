@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Css animations
+    </title>
+    <style>
+
+body {
+  padding: 50px;
+}
+
+a, a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+li:last-child {
+  margin-right: 0;
+}
+
+li:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+li:hover:after {
+  width: 100%;
+  background: blue;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">PAGE</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+</body>
+</html>
